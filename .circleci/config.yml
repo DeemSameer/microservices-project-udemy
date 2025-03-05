@@ -25,10 +25,10 @@ jobs:
           name: Docker Login and Push
           command: |
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker push udagram-frontend
-            docker push udagram-api-feed
-            docker push udagram-api-user
-            docker push reverseproxy
+            docker push deemsameer/udagram-frontend
+            docker push deemsameer/udagram-api-feed
+            docker push deemsameer/udagram-api-user
+            docker push deemsameer/reverseproxy
 workflows:
   version: 2
   build-and-push:
