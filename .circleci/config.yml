@@ -11,8 +11,6 @@ jobs:
           DOCKER_AUTH: '{"auths": {"https://index.docker.io/v1/": {"auth": "<encoded_auth>"}}}'
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.17 #or a more recent version.
       - run:
           name: Check Docker version
           command: docker --version
