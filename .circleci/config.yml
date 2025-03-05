@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: cimg/node:13.14
-      - image: docker:20.10.17 # Or a more recent version
+      - image: docker
         auth:
           username: $DOCKER_USERNAME
           password: $DOCKER_PASSWORD
