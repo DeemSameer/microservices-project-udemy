@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: cimg/node:13.14
-      - image: docker:20.10.5 # Or a more recent version
+      - image: docker # Or a more recent version
         auth:
           username: $DOCKER_HUB_USERNAME
           password: $DOCKER_HUB_PASSWORD
@@ -12,7 +12,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-          version: 20.10.5 #or a more recent version.
       - run:
           name: Check Docker version
           command: docker --version
