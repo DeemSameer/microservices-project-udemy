@@ -1,0 +1,29 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJUDJXa3dMaVMrZEF3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBek1EWXdOekl6TkRSYUZ3MHpOVEF6TURRd056STRORFJhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM5TUZJc3A2b3ZlSitPeHd3WGNiYjdqOGdEaHJEM0tRdzh0bzhLRXpFaTFKamRYTGlScXRRbXRsWXEKVzhiNm9UZ2E5anZWME00aHFYNlJHWTg2M3pDaStyZHZaazc4OUpCeW8vQitxcFZkZzJ3WWZQR29peWE4Lzl2KwpjV0tPQXhLYWhWT2hTMUFWVDIzME54dk9WcjFrRkNFUDFtbWFjQTFreTc3YS9BRjBOWStkVU1Bd0daTkU0VEo3Cm1lVGxqaDN2WGIvV3BYNG5NaHFaNk9PVzBSQ3p5OXRhTkF5dWdHZTFXU2NhdXJwZjZYd01JNzh5VW1uRU9hdVAKMGlWcHVrQXVhZEg4MndzZmNKUXJmeUZhYnVTWGZ3dnViODFsRFZoTHZwMWtnSWlwRjdwTHl0elZUT0RSbHBHSgpVRzd6RmxEcmhtRGRlT2VuM1VJdy9pMnpsRTByQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJTWGNuUm03emxvSVFsQmE1Ri9IMlIyREVvUkFUQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ0ZMTHY4Tm95cgozVVBvSHYzVEwybWpJV1lkUW9VMmo0bHdsNnUxMEVPcUQ1VExIUlJtR0U4MFBuSjI0RDhSaHBsNGxIMHVEbHdsClZQaUw2SzJucTNWSmFhUkdSWG9TL3Q2bkxlWlZwa0c2dWRSb3BER1IrdVQySXJZTnAvTmlZUkUweXZkeVFyRUEKSjk4S2twaHVsNEVaYTEyazJScVBlWXNXYW9sbG1YeG9TUVlnc21KZ1Fuc3dpQlNrRG14MEM3cmVpRVgvQUdsdwpSK2gvY2lEV3Z1ZGVHQ2JCbjNTUmhVbDJOcHhsN2g0VytlY1cyV3hXWkZkTmt3S0NJN0t3dHQwdjA5OWVXRVpUCnZlaGZqdEFZajlwNE82ZkRLRUJWam9kaGI5WWlhQ0RsbnFZeUpoQXgzbnJNYUZIVG1xWklxQ21LbzJOU2RYdWMKSk1KK3cwMVg0aUxFCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://EE8C1A5ACFB57A7E90ED823F9749465A.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:428679994835:cluster/udemy-microservices-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:428679994835:cluster/udemy-microservices-cluster
+    user: arn:aws:eks:us-east-1:428679994835:cluster/udemy-microservices-cluster
+  name: arn:aws:eks:us-east-1:428679994835:cluster/udemy-microservices-cluster
+current-context: arn:aws:eks:us-east-1:428679994835:cluster/udemy-microservices-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:428679994835:cluster/udemy-microservices-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - udemy-microservices-cluster
+      - --output
+      - json
+      command: aws
