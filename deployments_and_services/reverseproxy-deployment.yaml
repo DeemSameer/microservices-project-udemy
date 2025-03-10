@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: deemsameer/reverseproxy
+        image: deemsameer/reverseproxy:latest
         ports:
         - containerPort: 80
