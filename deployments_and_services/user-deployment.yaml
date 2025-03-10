@@ -19,3 +19,8 @@ spec:
         image: deemsameer/udagram-api-user
         ports:
         - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: env-configmap
+        - configMapRef:
+            name: env-secret
