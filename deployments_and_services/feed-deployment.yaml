@@ -16,6 +16,11 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: deemsameer/udagram-api-feed
+        image: deemsameer/udagram-api-feed:latest
         ports:
         - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: env-configmap
+        - configMapRef:
+            name: env-secret
